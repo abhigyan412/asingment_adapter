@@ -17,7 +17,7 @@ It supports token management (expiry + refresh) and a clean, extensible architec
 
 ---
 
-## 📊 Architecture Diagram
+##  Architecture Diagram
 ```mermaid
 flowchart TD
     A["User Request (syncTrades)"] --> B["SyncService"]
