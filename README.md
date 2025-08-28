@@ -29,7 +29,7 @@ flowchart TD
     F --> G["Unified Trade[]"]
 
 ---
-## ⚙️ How to Run
+##  How to Run
 npm install
 npx ts-node src/index.ts
 - Go to https://drive.google.com/file/d/1YbuSfbtBtLbJ0ScVfarnjljxw7prHOkY/view?usp=sharing    for diagramatic representation.  
