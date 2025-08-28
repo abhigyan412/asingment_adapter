@@ -17,18 +17,19 @@ It supports token management (expiry + refresh) and a clean, extensible architec
 
 ---
 
-##  Architecture Diagram
+## 📊 Architecture Diagram
+
 ```mermaid
 flowchart TD
     A["User Request (syncTrades)"] --> B["SyncService"]
     B --> C["TokenService"]
     C -->|Valid| D["BrokerAdapter (Zerodha)"]
-    C -->|Expired| E["Refresh Token -> Store New"]
+    C -->|Expired| E["Refresh Token"]
     E --> D
     D --> F["Normalizer"]
     F --> G["Unified Trade[]"]
 
----
+
 ##  How to Run
 npm install
 npx ts-node src/index.ts
