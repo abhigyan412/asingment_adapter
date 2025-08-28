@@ -3,6 +3,10 @@
 ## 🚀 Overview
 This project implements a backend integration layer to fetch and normalize trades from brokers (e.g., Zerodha).  
 It supports token management (expiry + refresh) and a clean, extensible architecture.
+##  How to Run
+npm install
+npx ts-node src/index.ts
+- Go to https://drive.google.com/file/d/1YbuSfbtBtLbJ0ScVfarnjljxw7prHOkY/view?usp=sharing    for diagramatic representation.  
 
 ---
 
