@@ -18,15 +18,16 @@ It supports token management (expiry + refresh) and a clean, extensible architec
 ---
 
 ## 📊 Architecture Diagram
-   ```mermaid
-    flowchart TD
-     A[User Request syncTrades(userId, broker)] --> B[SyncService]
-     B --> C[TokenService]
-     C -->|Valid| D[BrokerAdapter]
-     C -->|Expired| E[Refresh Token -> Store New]
-     E --> D[BrokerAdapter]
-     D --> F[Normalize Raw Trades]
-     F --> G[Return Unified Trade[]]
+```mermaid
+flowchart TD
+    A["User Request (syncTrades)"] --> B["SyncService"]
+    B --> C["TokenService"]
+    C -->|Valid| D["BrokerAdapter (Zerodha)"]
+    C -->|Expired| E["Refresh Token -> Store New"]
+    E --> D
+    D --> F["Normalizer"]
+    F --> G["Unified Trade[]"]
+
 ---
 ## ⚙️ How to Run
 npm install
