@@ -6,12 +6,6 @@ It supports token management (expiry + refresh) and a clean, extensible architec
 
 ---
 
-## 🏗 Architecture
-- **adapters/** → Broker-specific adapters (e.g., `ZerodhaAdapter`).
-- **models/** → Unified data models (`Trade`).
-- **services/** → Core business logic (token management, sync).
-- **utils/** → Helper functions (if needed).
-- **index.ts** → Entry point / example usage.
 
 ### Flow
 1. User requests trade sync.
