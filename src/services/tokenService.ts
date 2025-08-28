@@ -22,16 +22,16 @@ export class TokenService {
  getToken(userId: string, broker: string): string | null {
   const record = this.tokens.get(this.getKey(userId, broker));
   if (!record) {
-    console.log("❌ No token found for", userId, broker);
+    console.log(" No token found for", userId, broker);
     return null;
   }
 
   if (record.expiry < new Date()) {
-    console.log("⏳ Token expired at", record.expiry.toISOString());
+    console.log(" Token expired at", record.expiry.toISOString());
     return null; // expired
   }
 
-  console.log("✅ Token is still valid until", record.expiry.toISOString());
+  console.log(" Token is still valid until", record.expiry.toISOString());
   return record.token;
 }
 
